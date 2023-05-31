@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Nunito:wght@300&family=Rubik:ital@1&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    z-index: 10;
+    background-color: rgba(245, 245, 245, 0.802);
+    backdrop-filter: blur(7px);
+    top: 0;
+}
+
+.logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.loginBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateY(8px);
+}
+.menuBurger{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+    margin-top: 20px;
+}
+.card {
+    box-shadow: 2px 2px 5px 4px rgba(209, 207, 207, 0.68);
+    border-radius: 18px;
+    height: 550px;
+
+
+}
+
+.glav-card {
+    height: 780px;
+}
+
+@keyframes animeNav {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar-fixed {
+    position: fixed;
+    animation: animeNav 0.2s ease;
+}
+
+.topAdd{
+    padding-top: 115px;
+}
+
+
+.Cart__item {
+    border-radius: 10px;
+    border: 1px solid gray;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+
+.Cart__item>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease-in-out;
+}
+
+.Cart__item:hover>img {
+    animation: Scrolls 3s infinite alternate linear;
+    transform: scale(100%);
+}
+
+.text__carts {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 45px;
+    color: rgb(211, 217, 236);
+    text-shadow: 0 0 15px white;
+    position: absolute;
+    z-index: 2;
+    top: 95px;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+    transition: all 0.2s ease-in;
+}
+
+.Cart__item:hover .OPROS {
+    text-align: center;
+    opacity: 1;
+}
+
+.MANEY {
+    top: 290px;
+}
+
+.Cart__item:hover .MANEY {
+    text-align: center;
+    opacity: 1;
+}
+
+.Btn {
+    z-index: 5;
+    display: inline-block;
+}
+
+.blur {
+    transition: all 1s ease;
+}
+
+.Cart__item:hover .blur {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.275);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+.Btn>button {
+    padding: 15px 35px;
+    position: absolute;
+    top: 430px;
+    opacity: 0;
+    left: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.Cart__item:hover .Btn>button {
+    opacity: 1;
+}
+
+.Cart__item:hover .Btn button {
+    box-shadow: 0 0 25px rgb(232, 225, 225) inset;
+}
+
+.Cart__item:active .Btn button {
+    box-shadow: 0 0 25px rgb(96, 247, 106) inset;
+    border: 1px solid rgb(96, 247, 106);
+}
+
+@keyframes Scrolls {
+    0% {
+        transform: scale(100%);
+    }
+
+    50% {
+        transform: scale(105%);
+    }
+
+    100% {
+        transform: scale(110%);
+    }
+}
+
+
+
+
+/* //////// video scroll ///////// */
+.img__cart {
+    display: inline-block;
+    margin: 0 80px;
+    position: relative;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    transition: all 1s ease-in-out;
+    animation: Scrolling 10s linear infinite;
+}
+
+@keyframes Scrolling {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -76%;
+    }
+}
